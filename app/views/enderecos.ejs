@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>TRB 2 - DCC 195</title>
+    <link rel="stylesheet" href="css/basic.css">
+  </head>
+  <body>
+    <div>
+      <ul>
+        <lo><h2>Links para os Exercicios</h2></lo>
+          <% for(var i in enderecos) {
+              var link = enderecos[i];
+          %>
+            <li><a href="<%=link.link%>"><%=link.url%></a></li>
+          <%}%>
+      </ul>
+      <div>
+        <div class="img">
+          <img src="" alt="">
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

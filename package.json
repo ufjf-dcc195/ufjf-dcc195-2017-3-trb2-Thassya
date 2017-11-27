@@ -23,7 +23,11 @@
   },
   "homepage": "https://github.com/ufjf-dcc195/ufjf-dcc195-2017-3-trb2-Thassya#readme",
   "dependencies": {
+    "compression": "^1.7.1",
     "ejs": "^2.5.7",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "method-override": "^2.3.10",
+    "morgan": "^1.9.0"
   }
 }
