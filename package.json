@@ -1,0 +1,29 @@
+{
+  "name": "trb2-thassya",
+  "version": "1.0.0",
+  "description": "Segundo trabalho da Disciplina DCC195 - UFJF",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ufjf-dcc195/ufjf-dcc195-2017-3-trb2-Thassya.git"
+  },
+  "keywords": [
+    "MongoDB",
+    "Express",
+    "AngularJS",
+    "Node.js"
+  ],
+  "author": "Thassya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ufjf-dcc195/ufjf-dcc195-2017-3-trb2-Thassya/issues"
+  },
+  "homepage": "https://github.com/ufjf-dcc195/ufjf-dcc195-2017-3-trb2-Thassya#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2"
+  }
+}
