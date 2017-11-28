@@ -3,18 +3,38 @@ html{
     background-color: lightgrey;
     font-family: sans-serif;
   }
-  
-  body{
+    
+  .content{ 
+    height: 100%;
+  }
+
+  .content-center{
     background-color: white;
-    padding: 1em;
-  }
-  
-  .logo > img {
     width: 50%;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+   left: 0; right: 0;
+  }
+
+  .logo > img {
+    width: 100%;
   }
   
+  .menu, .conteudo{
+    padding: 50px;
+  }
   .menu ul>li {
     padding-bottom: 20px;
     display: inline-block;
     width  : 100px;
+  }
+
+  #sobre {
+    margin: auto auto;
+  }
+
+  #sobre table{
+    display: inline-block;
+    min-width: 500px;
   }
