@@ -9,3 +9,12 @@ html{
     padding: 1em;
   }
   
+  .logo > img {
+    width: 50%;
+  }
+  
+  .menu ul>li {
+    padding-bottom: 20px;
+    display: inline-block;
+    width  : 100px;
+  }

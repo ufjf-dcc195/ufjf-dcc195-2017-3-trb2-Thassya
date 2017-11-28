@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <title><%=titulo%></title>
+    <title>TRB 2 - DCC 195</title>
+    <link rel="stylesheet" href="css/basic.css">
   </head>
   <body>
-    <h1><%=titulo%></h1>
+   <div class="logo">
+      <img  src="sly.png" alt="Slytherin Pride">
+    </div>
+
+    <div class="menu">      
+        <h2>Menu</h2>
+        <ul>
+          <% for(var i in enderecos) {
+              var link = enderecos[i];
+          %>
+            <li><a href="<%=link.link%>"><%=link.url%></a></li>
+          <%}%>
+      </ul>
+      <div>
+        
+      </div>
+    </div>
 
   </body>
 </html>
