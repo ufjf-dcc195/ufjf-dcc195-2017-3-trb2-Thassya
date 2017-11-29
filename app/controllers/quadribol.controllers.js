@@ -29,15 +29,19 @@ module.exports.rodadas = function(req,res,next){
         req.session.rodada++;
         
         var ganhadores = [];
-        for(var i = 1; i < jogos.length; i++){
+        for(var i = 0; i < jogos.length; i++){
             if(ganhador()){
-                ganhadores[i] = [jogos[i].equipe1];
+                ganhadores[i] = jogos[i].equipe1;
             }
             else{
-                ganhadores[i] = [jogos[i].equipe2];
+                ganhadores[i] = jogos[i].equipe2;
             }
         } 
-        console.log("Ganhadores "+ ganhadores);
+
+        sorteados = [];
+        req.session.jogos = defineJogos(ganhadores.length, ganhadores);
+
+        console.log(req.session.jogos);
 
         res.render("quadribol/disposicaojogos", {"jogos": req.session.jogos, "rodada": req.session.rodada });
     }
@@ -45,13 +49,17 @@ module.exports.rodadas = function(req,res,next){
 
 
 var sorteados = [];
-var jogos = [];
 
 defineJogos = function(tamEquipes, equipes){
-    console.log("tamanho: " + tamEquipes + " ----- Equipes: " + equipes);
-    var j = 1;
-    for(var i = 1; i < tamEquipes; i = i+2){
-        jogos[j]={ equipe1 : equipes[defineRodadas(tamEquipes-1)], equipe2 : equipes[defineRodadas(tamEquipes-1)]};
+    var jogos = [];
+    var j = 0;
+    for(var i = 0; i < tamEquipes; i = i+2){
+        var t1 = defineRodadas(tamEquipes-1);
+        var t2 = defineRodadas(tamEquipes-1);
+
+        console.log("t1: " + t1 +  " t2: " + t2);
+
+        jogos[j]={ equipe1 : equipes[t1], equipe2 : equipes[t2]};
         j++;
     }
     return jogos;
@@ -59,15 +67,16 @@ defineJogos = function(tamEquipes, equipes){
 
 defineRodadas = function(valorMaximo) {
 
-        var sugestao = Math.round(Math.random() * valorMaximo); // Escolher um numero ao acaso   
-        
+    console.log(sorteados);
 
-        while (sorteados.indexOf(sugestao) >= 0) {  // Enquanto o numero já existir, escolher outro
-            sugestao = Math.round(Math.random() * valorMaximo);
-        }
-        sorteados.push(sugestao); // adicionar este numero à array de numeros sorteados para futura referência
-        return sugestao; // devolver o numero único
-   
+    if(sorteados.length >= valorMaximo){ sorteados = []; }
+    var sugestao = Math.round(Math.random() * valorMaximo); // Escolher um numero ao acaso   
+    
+    while (sorteados.indexOf(sugestao) >= 0) {  // Enquanto o numero já existir, escolher outro
+        sugestao = Math.round(Math.random() * valorMaximo);
+    }
+    sorteados.push(sugestao); // adicionar este numero à array de numeros sorteados para futura referência
+    return sugestao; // devolver o numero único
 }
 
 ganhador = function(){
