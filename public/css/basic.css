@@ -35,10 +35,23 @@ html{
     margin: auto auto;
   }
 
-  #sobre table{
+  #sobre table {
     display: inline-block;
     min-width: 500px;
   }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
+    padding-bottom: 10px;
+  }
+  table tr td, table tr th {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  
 
 input[type=text] {
     padding:5px; 

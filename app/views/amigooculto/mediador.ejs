@@ -15,21 +15,13 @@
 
         <div class="conteudo">
             <h1>Cadastro de nomes para o Amigo-Oculto</h1>
-            <form name="nome" action="/nomes" method="POST">
-                <label>Quem irá participar?</label>
-                <input type="text" id="nome" name="nome"/>
+            <form name="nome" action="" method="POST">
+                <textarea name="nomes" rows="10" cols="50">Thassya, Talita, Simony, Tatiane</textarea>
                
-                <button type="submit" formaction="/adicionaNome">Adicionar</button>  <br> <br>
-                <button type="submit" formaction="/sorteia">Pronto!!</button>
+                <button type="submit" >Pronto!!</button>
 
             </form>
 
-            <h1>Nomes</h1>
-                <% for(var i in nomes) {
-                    var n = nomes[i];
-                %>
-                    <li><%= nomes %></li>
-                <%}%>
            
          </div>
         </div>

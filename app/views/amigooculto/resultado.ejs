@@ -14,8 +14,25 @@
         </div>
 
         <div class="conteudo">
-         </div>
-        
+          <table>
+            <thead>
+            <tr>
+              <th>Participante</th>
+              <th>Amigo Oculto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for(var i in amigos){
+              var par = amigos[i];
+            %>
+            <tr>               
+                <td><%=par.nome1%></td>
+                <td><%=par.nome2%></td>
+            </tr>
+            <%}%>
+          </tbody>
+          </table> 
+         </div>        
         </div>
       </div>
   </body>
