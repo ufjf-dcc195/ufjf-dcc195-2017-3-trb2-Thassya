@@ -1,29 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <title>TRB 2 - DCC 195</title>
-    <link rel="stylesheet" href="css/basic.css">
-  </head>
-  <body>
-      <div class="content">
-        <div class="content-center">
-        <div class="logo">
-            <img  src="maroto.png" alt="Slytherin Pride">
-        </div>
+<%- contentFor('body') %>
+<div class="jumbotron text-center">
 
-        <div class="menu">      
-            <h2>Menu</h2>
-            <ul>
-              <% for(var i in enderecos) {
-                  var link = enderecos[i];
-              %>
-                <li><a href="<%=link.link%>"><%=link.url%></a></li>
-              <%}%>
-          </ul>
-        </div>
-        </div>
-      </div>
-  </body>
-</html>
+<h1>Menu</h1>
+  <ul class="nav nav-pills nav-fill">
+    <% for(var i in enderecos) {
+        var link = enderecos[i];
+    %>
+      <li class="nav-item"><a  class="nav-link" href="<%=link.link%>"><%=link.url%></a></li>
+    <%}%>
+  </ul>
+</div>

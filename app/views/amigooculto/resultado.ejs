@@ -1,39 +1,22 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <title>Resultado Sorteio amigo-oculto</title>
-    <link rel="stylesheet" href="css/basic.css">
-  </head>
-  <body>
-      <div class="content">
-        <div class="content-center">
-        <div class="logo">
-            <img  src="maroto.png" alt="Slytherin Pride">
-        </div>
-
-        <div class="conteudo">
-          <table>
-            <thead>
-            <tr>
-              <th>Participante</th>
-              <th>Amigo Oculto</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% for(var i in amigos){
-              var par = amigos[i];
-            %>
-            <tr>               
-                <td><%=par.nome1%></td>
-                <td><%=par.nome2%></td>
-            </tr>
-            <%}%>
-          </tbody>
-          </table> 
-         </div>        
-        </div>
-      </div>
-  </body>
-</html>
+<%- contentFor('body') %>
+<div class="jumbotron text-center">
+<h1>Cadastro de nomes</h1>
+<table class="table table-striped table-bordered">
+    <thead>
+    <tr>
+      <th scope="col">Participante</th>
+      <th scope="col">Amigo Oculto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for(var i in amigos){
+      var par = amigos[i];
+    %>
+    <tr>               
+        <td><img  src="marrom.png"><%=par.nome1%></td>
+        <td><img  src="laranja.png"><%=par.nome2%></td>
+    </tr>
+    <%}%>
+  </tbody>
+  </table> 
+</div>

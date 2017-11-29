@@ -4,6 +4,7 @@ var methodOverride = require("method-override");
 var compression = require("compression");
 var bodyParser = require("body-parser");
 var session = require('express-session');
+var expressLayouts = require('express-ejs-layouts')
 var ejs = require("ejs");
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'devel';
@@ -27,10 +28,13 @@ module.exports = function(){
       resave: true,
       secret: config.secret
     }));
+    app.use(expressLayouts);
     app.set('views', './app/views');
     app.set('view engine', 'ejs');
+    
   
     app.use(express.static('./public'));
+    require("../app/routes/tictactoe.routes")(app);
     require("../app/routes/amigooculto.routes")(app);
     require("../app/routes/sobre.routes")(app);
     require("../app/routes/index.routes")(app);

@@ -1,40 +1,24 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre</title>
-    <link rel="stylesheet" href="css/basic.css">
-  </head>
-  <body>
-      <div class="content">
-          <div class="content-center">
-          <div class="logo">
-              <img  src="maroto.png" alt="Slytherin Pride">
-          </div>
+<%- contentFor('body') %>
+<div class="jumbotron text-center">
+    <h1> Sobre o autor</h1>
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+           <th scope="col">Nome:</th>
+           <th scope="col">Matricula:</th>
+           <th scope="col">Curso:</th>
+           <th scope="col">E-mail:</th>
+           
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td><%=nome%></td>
+           <td><%=matricula%></td>
+           <td><%=curso%></td>
+           <td><%=email%></td>
+         </tr>
+        </tbody>
+      </table>
+</div>
 
-          <div class="conteudo">
-          <h1> Sobre o autor</h1>
-          <table>
-              <tr>
-                 <td><h2> Nome:</h2></td>
-                 <td><h2><%=nome%></h2></td>
-              </tr>
-              <tr>
-                 <td><h2> Matricula:</h2></td>
-                 <td><h2><%=matricula%></h2></td>
-               </tr>
-               <tr>
-                 <td><h2> Curso:</h2></td>
-                 <td><h2><%=curso%></h2></td>
-               </tr>
-               <tr>
-                 <td><h2> E-mail:</h2></td>
-                 <td><h2><%=email%></h2></td>
-              </tr>
-            </table>
-          </div>
-          </div>
-        </div>
-  </body>
-</html>

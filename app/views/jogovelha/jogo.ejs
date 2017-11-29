@@ -1,0 +1,42 @@
+<%- contentFor('body') %>
+<div class="jumbotron text-center">
+<h1>Jogo da Velha</h1>
+  <table class="table table-bordered" id="tic-tac-toe">
+      <% for(var i in tabuleiro){
+              linha=tabuleiro[i];%>
+          <tr align="center">
+          <%
+          for(var j in linha){
+                var casa = linha[j];
+                var  peca;%>
+                <td align="center">
+                <%if(casa=="x"){%>
+                  <div id="casa">  <img  src="verde.png"></div>
+
+                <%}
+                else if(casa=="o"){%>
+                  <div id="casa">  <img  src="azul.png"></div>
+                <%}else{%>
+                  <div id="casa"></div>
+              <%}%>
+            </td>
+          <%}%>
+        </tr>
+        <%}%>
+  </table>
+  <hr>
+  <form name="tic-tac-toe" action="" method="POST">
+      <div class="form-group">
+      <%for(var i in tabuleiro){
+          linha=tabuleiro[i];
+          for(var j in linha){
+            var casa = linha[j];%>
+            <input  type="text" name="jogo" value="<%=casa%>">
+          <%}%>
+          <br>
+        <%}%>
+          </div>
+    <input type="submit">
+   
+    </form>
+</div>

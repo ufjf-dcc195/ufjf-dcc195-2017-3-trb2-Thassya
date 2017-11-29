@@ -3,6 +3,7 @@ module.exports.enderecos = function(req,res,next){
       {url:"/",link :"/"},
       {url:"Index",link :"/index.html"},
       {url:"Sobre", link :"/sobre.html"},
-      {url: "Amigo Oculto", link: "/amigooculto.html"}
+      {url: "Amigo Oculto", link: "/amigooculto.html"},
+      {url: "Jogo da Velha", link: "/jogovelha.html"}
     ]});
   };

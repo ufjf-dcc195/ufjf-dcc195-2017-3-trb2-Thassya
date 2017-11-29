@@ -1,32 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <title>Preparação para o Amigo-Oculto</title>
-    <link rel="stylesheet" href="css/basic.css">
-  </head>
-  <body>
-      <div class="content">
-        <div class="content-center">
-        <div class="logo">
-            <img  src="maroto.png" alt="Slytherin Pride">
-        </div>
-
-        <div class="conteudo">
-            <h1>Cadastro de nomes para o Amigo-Oculto</h1>
-            <form name="nome" action="" method="POST">
-                <textarea name="nomes" rows="10" cols="50">Thassya, Talita, Simony, Tatiane</textarea>
-               
-                <button type="submit" >Pronto!!</button>
-
-            </form>
-
-           
-         </div>
-        </div>
-      </div>
-  </body>
-
-  
-</html>
+<%- contentFor('body') %>
+<div class="jumbotron text-center">
+<h1>Cadastro de nomes</h1>
+<form name="nome" action="" method="POST">
+    <div class="form-group">
+        <label for="nomes">Quem irá participar?</label>
+        <textarea class="form-control" name="nomes" rows="10">Thassya, Talita, Simony, Tatiane</textarea> 
+    </div>
+    <button type="submit" >Pronto!!</button>
+</form>
+</div>
