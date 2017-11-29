@@ -1,9 +1,9 @@
 var express = require("./config/express");
 
-var app =express();
+var app = express();
+var porta = process.env.PORT || 3002
 
-
-app.listen(3000);
-console.log("executando em localhost:3000");
+app.listen(porta);
+console.log("Escutando em http://localhost:3001");
 
 module.exports = app;

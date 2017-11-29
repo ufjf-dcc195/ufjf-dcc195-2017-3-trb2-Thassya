@@ -8,7 +8,7 @@ module.exports.amigooculto = function(req,res,next){
         var nomes = req.body.nomes.split(",");
         var pares = []
         var contaPar=0;
-        var numParticipantes = nomes.length
+        var numParticipantes = nomes.length;
         for(var i=0;i<numParticipantes-1;i++){
           pares[contaPar]={ 'nome1': nomes[i],'nome2': nomes[i+1]}
           contaPar++;

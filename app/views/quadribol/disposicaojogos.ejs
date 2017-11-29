@@ -1,6 +1,7 @@
 <%- contentFor('body') %>
 <div class="jumbotron text-center">
     <h1>E os jogos serão: </h1>
+    <h3>Rodoada <%= rodada %></h3>
     <form name="partidas" action="/rodada" method="POST"> 
         <table class="table table-striped table-bordered">
             <thead class="thead-dark">
@@ -10,12 +11,12 @@
                 </tr>
             </thead>
             <tbody>
-                <% for(var i in Jogos){
-                    var jogo = Jogos[i]; 
+                <% for(var i = 1; i < jogos.length; i++){
+                    var jogo = jogos[i]; 
                     %>   
                 <tr>
                     <th scope="row"><%= i %></th>                
-                    <td><%=jogo.equipe1%> x <%=jogo.equipe2%></td>               
+                    <td> <img src="pomo.png" width="30px"> <%=jogo.equipe1%> x <%=jogo.equipe2%></td>               
                 </tr>
                 <%}%> 
             </tbody>            

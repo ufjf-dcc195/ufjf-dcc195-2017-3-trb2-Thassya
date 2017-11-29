@@ -10,11 +10,11 @@
                 var casa = linha[j];
                 var  peca;%>
                 <td align="center">
-                <%if(casa=="x"){%>
+                <%if(casa=="x" || casa=="X"){%>
                   <div id="casa">  <img  src="verde.png"></div>
 
                 <%}
-                else if(casa=="o"){%>
+                else if(casa=="o" || casa=="O" || casa=="0"){%>
                   <div id="casa">  <img  src="azul.png"></div>
                 <%}else{%>
                   <div id="casa"></div>
@@ -25,6 +25,8 @@
         <%}%>
   </table>
   <hr>
+  <h2>Utilize este formulário para jogar</h2>
+  <h3>Opções válidas: "o" ou "x"</h3>
   <form name="tic-tac-toe" action="" method="POST">
       <div class="form-group">
       <%for(var i in tabela){

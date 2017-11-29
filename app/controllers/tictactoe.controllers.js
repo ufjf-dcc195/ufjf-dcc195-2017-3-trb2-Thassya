@@ -19,6 +19,6 @@ module.exports.jogo = function(req,res,next){
           linha+=3;
         }
         console.log(matriz);
-        res.render("jogovelha/jogo",{tabuleiro:matriz});
+        res.render("jogovelha/jogo",{tabela:matriz});
       }
 };
