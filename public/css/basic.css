@@ -1,4 +1,4 @@
-#tic-tac-toe td {
+#tic-tac-toe td, #quadribol td, #quadribol th {
     font-size: 3em;
     height: 80px;
     width: 80px;

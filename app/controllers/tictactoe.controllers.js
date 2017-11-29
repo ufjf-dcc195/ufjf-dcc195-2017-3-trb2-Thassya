@@ -1,6 +1,6 @@
 module.exports.jogo = function(req,res,next){
     if(req.method =='GET'){
-        res.render("jogovelha/jogo",{tabuleiro:[
+        res.render("jogovelha/jogo",{tabela:[
           {1:null,2:null,3:null},
           {1:null,2:null,3:null},
           {1:null,2:null,3:null}

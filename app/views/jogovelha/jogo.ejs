@@ -2,8 +2,8 @@
 <div class="jumbotron text-center">
 <h1>Jogo da Velha</h1>
   <table class="table table-bordered" id="tic-tac-toe">
-      <% for(var i in tabuleiro){
-              linha=tabuleiro[i];%>
+      <% for(var i in tabela){
+              linha=tabela[i];%>
           <tr align="center">
           <%
           for(var j in linha){
@@ -27,8 +27,8 @@
   <hr>
   <form name="tic-tac-toe" action="" method="POST">
       <div class="form-group">
-      <%for(var i in tabuleiro){
-          linha=tabuleiro[i];
+      <%for(var i in tabela){
+          linha=tabela[i];
           for(var j in linha){
             var casa = linha[j];%>
             <input  type="text" name="jogo" value="<%=casa%>">
@@ -36,7 +36,8 @@
           <br>
         <%}%>
           </div>
-    <input type="submit">
+
+          <button type="submit" class="btn btn-dark">Enviar</button>
    
     </form>
 </div>

@@ -34,6 +34,7 @@ module.exports = function(){
     
   
     app.use(express.static('./public'));
+    require("../app/routes/quadribol.routes")(app);
     require("../app/routes/tictactoe.routes")(app);
     require("../app/routes/amigooculto.routes")(app);
     require("../app/routes/sobre.routes")(app);
