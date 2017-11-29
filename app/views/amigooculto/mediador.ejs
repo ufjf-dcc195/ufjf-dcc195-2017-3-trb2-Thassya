@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Preparação para o Amigo-Oculto</title>
+    <link rel="stylesheet" href="css/basic.css">
+  </head>
+  <body>
+      <div class="content">
+        <div class="content-center">
+        <div class="logo">
+            <img  src="maroto.png" alt="Slytherin Pride">
+        </div>
+
+        <div class="conteudo">
+            <h1>Cadastro de nomes para o Amigo-Oculto</h1>
+            <form name="nome" action="/nomes" method="POST">
+                <label>Quem irá participar?</label>
+                <input type="text" id="nome" name="nome"/>
+               
+                <button type="submit" formaction="/adicionaNome">Adicionar</button>  <br> <br>
+                <button type="submit" formaction="/sorteia">Pronto!!</button>
+
+            </form>
+
+            <h1>Nomes</h1>
+                <% for(var i in nomes) {
+                    var n = nomes[i];
+                %>
+                    <li><%= nomes %></li>
+                <%}%>
+           
+         </div>
+        </div>
+      </div>
+  </body>
+
+  
+</html>

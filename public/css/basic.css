@@ -9,7 +9,7 @@ html{
   }
 
   .content-center{
-    background-color: white;
+    
     width: 50%;
     height: 100%;
     margin: auto;
@@ -23,6 +23,7 @@ html{
   
   .menu, .conteudo{
     padding: 50px;
+    background-color: white;
   }
   .menu ul>li {
     padding-bottom: 20px;
@@ -38,3 +39,23 @@ html{
     display: inline-block;
     min-width: 500px;
   }
+
+input[type=text] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+button[type=submit], button[type=reset], button {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+label{
+  padding: 5px 15px;
+  display: inline-block;
+}
